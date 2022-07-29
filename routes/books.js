@@ -161,8 +161,3 @@ router.post('/:id/delete', asyncHandler( async (req, res, next) => {
 }));
 
 module.exports = router;
-
-
-
-
-

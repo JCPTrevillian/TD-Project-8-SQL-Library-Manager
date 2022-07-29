@@ -45,7 +45,7 @@ app.use('/books', books);
   console.log('404 error handler');
   const err = new Error();
   err.status = 404;
-  err.message = "It looks like the page does not exist." 
+  err.message = "Page does not exist." 
   res.render('not-found', { err });
 })
 
