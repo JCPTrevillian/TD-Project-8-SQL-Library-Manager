@@ -1,0 +1,13 @@
+extends ../layout 
+
+block content
+ h1= title 
+
+ include book-error 
+ 
+ form(action="/books/" + book.id, method="post")
+  include form
+  p 
+   input(type="submit" value="Update Book") 
+  p 
+   a.button(href=`/books/${book.id}/delete` class='butn dbook') Delete Book

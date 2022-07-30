@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+ h1=title
+
+ include ../search
+    
+ h2 No Book matches the search
+ p Please try another search or 
+  a(href="/books") return to Book listing

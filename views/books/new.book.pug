@@ -1,0 +1,11 @@
+extends ../layout 
+
+block content
+ h1= title
+
+ include book-error
+
+ form(method="POST" action="/books/new")
+  include form
+  p  
+   input(type="submit" value="Create New Book")
