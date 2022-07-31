@@ -1,0 +1,7 @@
+extends layout
+
+block content
+
+    h1= `${err.status} - Server error`
+    p= err.message
+    p= err.stack

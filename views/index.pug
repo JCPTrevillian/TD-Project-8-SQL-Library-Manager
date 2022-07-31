@@ -1,0 +1,33 @@
+extends layout
+
+block content
+
+  h1=title
+  
+  include search
+  
+  p 
+    a.button(href='/books/new') Create New Book
+    table
+        thead
+          tr
+            th Title
+            th Author
+            th Genre
+            th Year
+        tbody
+        each book in books 
+          tr  
+            td 
+              a(href='/books/' + book.id) #{book.title}
+            td #{book.author}
+            td #{book.genre}
+            td #{book.year}
+
+  p.pagination-links
+   - let i = 0;
+   while i < numOfPages 
+    if(searchValue)
+     a(class="pagination-button" href=`/books/search?searchValue=${searchValue}&page=${++ i}`) #{ i }
+    else
+     a(class="pagination-button" href=`/books?page=${++ i}`) #{i}
