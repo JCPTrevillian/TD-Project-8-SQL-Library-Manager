@@ -1,0 +1,7 @@
+extends layout 
+
+block content
+    
+    h1= `${err.status} - Page Not Found`
+    p= err.message
+    a.button(href='/') Home
